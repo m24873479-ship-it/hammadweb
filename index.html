@@ -1,148 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechBiz Daily</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<title>TechBiz Daily - News, Tech & Business</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            color: #222;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            background: #111827;
-            color: white;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #17202a;
+}
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-        }
+header {
+    background: #111827;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 16px;
-        }
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+.logo span {
+    color: #3b82f6;
+}
 
-        .hero {
-            padding: 70px 8%;
-            background: white;
-            text-align: center;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 16px;
+}
 
-        .hero h1 {
-            font-size: 44px;
-            margin-bottom: 15px;
-        }
+nav a:hover {
+    color: #60a5fa;
+}
 
-        .hero p {
-            color: #666;
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
+.hero {
+    background: white;
+    padding: 65px 7%;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
 
-        .button {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 6px;
-            text-decoration: none;
-        }
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
 
-        .container {
-            width: 84%;
-            margin: 40px auto;
-        }
+.hero p {
+    color: #667085;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
 
-        .section-title {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
+.search {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
+.search input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px 0 0 6px;
+    font-size: 15px;
+}
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
+.search button {
+    padding: 14px 22px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
 
-        .card span {
-            color: #2563eb;
-            font-size: 14px;
-            font-weight: bold;
-        }
+.container {
+    width: 86%;
+    max-width: 1200px;
+    margin: 45px auto;
+}
 
-        .card h3 {
-            margin: 12px 0;
-            font-size: 21px;
-        }
+.section-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
 
-        .card p {
-            color: #666;
-            line-height: 1.6;
-        }
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
 
-        footer {
-            margin-top: 50px;
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
 
-        @media (max-width: 768px) {
-            header {
-                text-align: center;
-                justify-content: center;
-                gap: 15px;
-            }
+.card:hover {
+    transform: translateY(-4px);
+}
 
-            nav a {
-                margin: 0 8px;
-            }
+.category {
+    font-size: 13px;
+    font-weight: bold;
+    color: #2563eb;
+    text-transform: uppercase;
+}
 
-            .hero h1 {
-                font-size: 34px;
-            }
+.card h3 {
+    margin: 12px 0;
+    font-size: 21px;
+}
 
-            .cards {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+.card p {
+    color: #667085;
+    line-height: 1.6;
+}
+
+.read {
+    display: inline-block;
+    margin-top: 15px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.category-section {
+    margin-top: 55px;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+}
+
+footer p {
+    color: #cbd5e1;
+    margin-top: 8px;
+}
+
+@media (max-width: 800px) {
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .search {
+        width: 100%;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">TechBiz Daily</div>
+    <div class="logo">Tech<span>Biz</span> Daily</div>
 
     <nav>
         <a href="#">Home</a>
@@ -154,47 +206,90 @@
 
 <section class="hero">
     <h1>Tech, Business & News</h1>
-    <p>Stay updated with the latest technology, business and news.</p>
-    <a href="#latest" class="button">Explore Latest</a>
+    <p>Stay informed with the latest news, technology and business updates.</p>
+
+    <div class="search">
+        <input type="text" placeholder="Search articles...">
+        <button>Search</button>
+    </div>
 </section>
 
-<div class="container" id="latest">
+<div class="container">
 
     <h2 class="section-title">Latest Updates</h2>
 
     <div class="cards">
 
-        <div class="card" id="news">
-            <span>NEWS</span>
-            <h3>Latest News & Updates</h3>
+        <div class="card">
+            <div class="category">News</div>
+            <h3>Latest News & Current Updates</h3>
             <p>
-                Discover important news, current events and useful information
-                from around the world.
+                Get the latest important news and updates from around the world.
             </p>
+            <a href="#" class="read">Read More →</a>
         </div>
 
-        <div class="card" id="tech">
-            <span>TECHNOLOGY</span>
-            <h3>Technology Trends</h3>
+        <div class="card">
+            <div class="category">Tech</div>
+            <h3>Latest Technology Trends</h3>
             <p>
-                Explore the latest developments in AI, gadgets, software,
-                internet and emerging technologies.
+                Explore AI, gadgets, software, internet technology and more.
             </p>
+            <a href="#" class="read">Read More →</a>
         </div>
 
-        <div class="card" id="business">
-            <span>BUSINESS</span>
-            <h3>Business Insights</h3>
+        <div class="card">
+            <div class="category">Business</div>
+            <h3>Business & Market Updates</h3>
             <p>
-                Read business updates, market insights, entrepreneurship tips
-                and industry news.
+                Discover business news, market developments and useful insights.
             </p>
+            <a href="#" class="read">Read More →</a>
         </div>
 
     </div>
+
+    <section class="category-section" id="news">
+        <h2 class="section-title">📰 News</h2>
+
+        <div class="cards">
+            <div class="card">
+                <div class="category">News</div>
+                <h3>News Section</h3>
+                <p>Your latest news articles will appear here.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="category-section" id="tech">
+        <h2 class="section-title">💻 Technology</h2>
+
+        <div class="cards">
+            <div class="card">
+                <div class="category">Tech</div>
+                <h3>Technology Section</h3>
+                <p>Your latest technology articles will appear here.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="category-section" id="business">
+        <h2 class="section-title">💼 Business</h2>
+
+        <div class="cards">
+            <div class="card">
+                <div class="category">Business</div>
+                <h3>Business Section</h3>
+                <p>Your latest business articles will appear here.</p>
+            </div>
+        </div>
+    </section>
+
 </div>
 
 <footer>
+    <strong>TechBiz Daily</strong>
+    <p>News • Technology • Business</p>
     <p>© 2026 TechBiz Daily. All rights reserved.</p>
 </footer>
 
